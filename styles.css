@@ -1,0 +1,129 @@
+body {
+  background-image: url("src/landscape.jpg");
+  font-family: Anonymous Pro;
+}
+
+.card {
+  margin-top: 150px;
+  border-radius: 30px;
+  background: #000000d0;
+  color: white;
+  font-family: Anonymous Pro;
+  display: block;
+}
+
+.card-body {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  text-align: center;
+  border: solid;
+  border-radius: 30px;
+  font-family: Anonymous Pro;
+}
+
+#city-input {
+  border: solid black;
+  background-color: white;
+  font-family: Anonymous Pro;
+  width: 30%;
+  text-align: center;
+  border-radius: 20px;
+}
+
+input,
+select,
+textarea {
+  color: black;
+}
+
+#button,
+#current-location {
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-family: Anonymous Pro;
+  border: solid black;
+}
+
+#button,
+#current-location,
+#city-input {
+  margin-top: 40px;
+}
+
+img {
+  display: block;
+  width: 150px;
+  margin-top: 20px;
+  margin-left: 80px;
+}
+
+.location {
+  font-family: Anonymous Pro;
+  margin-top: 30px;
+  margin-right: 40px;
+  font-size: 24px;
+  text-align: justify;
+}
+
+.town {
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+#date-time {
+  font-weight: bold;
+}
+
+.temperature {
+  font-family: Anonymous Pro;
+  margin-top: 5px;
+  font-size: 150px;
+}
+
+.conditions {
+  font-family: Anonymous Pro;
+  margin-top: 40px;
+  font-size: 24px;
+  text-align: justify;
+}
+
+.degrees {
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+.horizontalLine {
+  border: 1px solid white;
+  margin-top: 10px;
+}
+
+.monday,
+.tuesday,
+.wednesday,
+.thursday,
+.friday {
+  font-family: Anonymous Pro;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.forecastOne,
+.forecastTwo,
+.forecastThree,
+.forecastFour,
+.forecastFive {
+  width: 80px;
+  margin-left: 55px;
+}
+
+.monDegree,
+.tueDegree,
+.wedDegree,
+.thuDegree,
+.friDegree {
+  font-family: Anonymous Pro;
+  font-size: 24px;
+  margin-top: 20px;
+}
