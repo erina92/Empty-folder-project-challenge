@@ -127,3 +127,8 @@ img {
   font-size: 24px;
   margin-top: 20px;
 }
+
+.githubLink {
+  text-align: center;
+  margin-top: 10px;
+}
