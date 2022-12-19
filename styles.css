@@ -132,3 +132,17 @@ img {
   text-align: center;
   margin-top: 10px;
 }
+
+.active {
+  color: black;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+}
+
+.fahrenheit {
+  color: black;
+  cursor: default;
+}
