@@ -141,8 +141,3 @@ img {
 .active:hover {
   text-decoration: none;
 }
-
-.fahrenheit {
-  color: black;
-  cursor: default;
-}
