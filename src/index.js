@@ -41,25 +41,24 @@ let date = currentTime.getDate();
 dateElement.innerHTML = `${hours}:${minutes}, ${days[dayIndex]} ${date}`;
 
 // Bonus Feature
-function convertToFahrenheit(event) {
+function showFahrenheit(event) {
   event.preventDefault();
   let fahrenheitElement = document.querySelector("#temperature");
-  let fahrenheitTemperature = (fahrenheitElement.innerHTML * 9) / 5 + 32;
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   fahrenheitElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-function convertToCelius(event) {
+function showCelius(event) {
   event.preventDefault();
   let celsiusElement = document.querySelector("#temperature");
-  let celsiusTemperature = celsiusElement.innerHTML;
   celsiusElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 let fahrenheitTemp = document.querySelector("#fahrenheit-link");
-fahrenheitTemp.addEventListener("click", convertToFahrenheit);
+fahrenheitTemp.addEventListener("click", showFahrenheit);
 
 let celsiusTemp = document.querySelector("#celsius-link");
-celsiusTemp.addEventListener("click", convertToCelius);
+celsiusTemp.addEventListener("click", showCelius);
 
 // Search Engine Home Project
 
@@ -116,6 +115,8 @@ function showLocalWeather() {
 }
 
 showLocalWeather();
+
+let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", changeCity);
