@@ -62,58 +62,61 @@ celsiusTemp.addEventListener("click", convertToCelius);
 // Search Engine Home Project
 
 function showWeather(response) {
-  let temperature = Math.round(response.data.main.temp);
-  document.querySelector("#town-input").innerHTML = response.data.name;
+  let temperature = Math.round(response.data.temperature.current);
+  document.querySelector("#town-input").innerHTML = response.data.city;
   document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
+    response.data.temperature.current
   );
   let weatherDescription = document.querySelector("#description-weather");
-  weatherDescription.innerHTML = response.data.weather[0].description;
+  weatherDescription.innerHTML = response.data.condition.description;
   document.querySelector(
     "#humidity"
-  ).innerHTML = `humidity: ${response.data.main.humidity}%`;
+  ).innerHTML = `humidity: ${response.data.temperature.humidity}%`;
   document.querySelector("#wind").innerHTML = `wind: ${Math.round(
     response.data.wind.speed
   )} km/h`;
+
+  celsiusTemperature = response.data.temperature.current;
+
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://shecodes-assets.s3.amazonaws.com/api/weather/${response.data.condition.icon}.png`
   );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+  iconElement.setAttribute("alt", response.data.condition.description);
 }
 
-let form = document.querySelector("#search-form");
 function changeCity(event) {
   event.preventDefault();
   let cityName = document.querySelector("#town-input");
   let cityInput = document.querySelector("#city-input");
   cityName.innerHTML = cityInput.value;
 
-  let apiKey = "bb0df6985c2eab6a171d64a6bacbb4e1";
+  let apiKey = "343bb4d2fc1a4234edcd750t80ofe9d0";
   let units = "metric";
   let city = cityInput.value;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-  console.log(apiUrl);
-
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showWeather);
 }
-form.addEventListener("submit", changeCity);
 
-let currentCityButton = document.querySelector("#current-location");
 function showLocalWeather() {
   function getCurrentPosition(geolocation) {
     let latitude = geolocation.coords.latitude;
     let longitude = geolocation.coords.longitude;
     let apiKey = "bb0df6985c2eab6a171d64a6bacbb4e1";
     let units = "metric";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=${units}&appid=${apiKey}`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?lat=${latitude}&lon=${longitude}&units=${units}&appid=${apiKey}`;
 
     axios.get(apiUrl).then(showWeather);
   }
 
   navigator.geolocation.getCurrentPosition(getCurrentPosition);
 }
-currentCityButton.addEventListener("click", showLocalWeather);
 
 showLocalWeather();
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", changeCity);
+
+let currentCityButton = document.querySelector("#current-location");
+currentCityButton.addEventListener("click", showLocalWeather);
