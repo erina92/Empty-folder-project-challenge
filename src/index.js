@@ -44,13 +44,15 @@ dateElement.innerHTML = `${hours}:${minutes}, ${days[dayIndex]} ${date}`;
 function convertToFahrenheit(event) {
   event.preventDefault();
   let fahrenheitElement = document.querySelector("#temperature");
-  fahrenheitElement.innerHTML = 60;
+  let fahrenheitTemperature = (fahrenheitElement.innerHTML * 9) / 5 + 32;
+  fahrenheitElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function convertToCelius(event) {
   event.preventDefault();
   let celsiusElement = document.querySelector("#temperature");
-  celsiusElement.innerHTML = 16;
+  let celsiusTemperature = celsiusElement.innerHTML;
+  celsiusElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 let fahrenheitTemp = document.querySelector("#fahrenheit-link");
