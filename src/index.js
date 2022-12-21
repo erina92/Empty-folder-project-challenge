@@ -38,7 +38,7 @@ let months = [
 let yearIndex = currentTime.getFullYear();
 let date = currentTime.getDate();
 
-dateElement.innerHTML = `${hours}:${minutes}, ${days[dayIndex]} ${date}`;
+dateElement.innerHTML = `${hours}:${minutes} ${days[dayIndex]} ${date}`;
 
 function showWeather(response) {
   let temperature = Math.round(response.data.temperature.current);

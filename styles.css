@@ -1,6 +1,6 @@
 body {
   background-image: url("src/landscape.jpg");
-  font-family: Anonymous Pro;
+  font-family: Share Tech Mono;
 }
 
 .card {
@@ -8,7 +8,7 @@ body {
   border-radius: 30px;
   background: #000000d0;
   color: white;
-  font-family: Anonymous Pro;
+  font-family: Share Tech Mono;
   display: block;
   max-width: 100%;
 }
@@ -17,13 +17,13 @@ body {
   text-align: center;
   border: solid;
   border-radius: 30px;
-  font-family: Anonymous Pro;
+  font-family: Share Tech Mono;
 }
 
 #city-input {
   border: solid black;
   background-color: white;
-  font-family: Anonymous Pro;
+  font-family: Share Tech Mono;
   width: 30%;
   text-align: center;
   border-radius: 20px;
@@ -40,7 +40,7 @@ textarea {
   border-radius: 15px;
   background-color: rgb(255, 255, 255);
   color: black;
-  font-family: Anonymous Pro;
+  font-family: Share Tech Mono;
   border: solid black;
 }
 
@@ -62,30 +62,30 @@ img {
 }
 
 .location {
-  font-family: Anonymous Pro;
-  margin-top: 30px;
+  font-family: Share Tech Mono;
+  margin-top: 25px;
   margin-right: 40px;
-  font-size: 24px;
+  font-size: 30px;
   text-align: justify;
 }
 
 .town {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bolder;
 }
 
 #date-time {
-  font-weight: bold;
+  font-weight: lighter;
 }
 
 .temperature {
-  font-family: Anonymous Pro;
+  font-family: Share Tech Mono;
   margin-top: 5px;
   font-size: 150px;
 }
 
 .conditions {
-  font-family: Anonymous Pro;
+  font-family: Share Tech Mono;
   margin-top: 40px;
   font-size: 24px;
   text-align: justify;
@@ -106,7 +106,7 @@ img {
 .wednesday,
 .thursday,
 .friday {
-  font-family: Anonymous Pro;
+  font-family: Share Tech Mono;
   font-size: 24px;
   font-weight: bold;
 }
@@ -125,7 +125,7 @@ img {
 .wedDegree,
 .thuDegree,
 .friDegree {
-  font-family: Anonymous Pro;
+  font-family: Share Tech Mono;
   font-size: 24px;
   margin-top: 20px;
 }
