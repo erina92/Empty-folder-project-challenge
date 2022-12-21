@@ -66,7 +66,7 @@ function changeCity(event) {
   let cityName = document.querySelector("#town-input");
   let cityInput = document.querySelector("#city-input");
   cityName.innerHTML = cityInput.value;
-
+  // 🔌Api Integrationn
   let apiKey = "343bb4d2fc1a4234edcd750t80ofe9d0";
   let units = "metric";
   let city = cityInput.value;
