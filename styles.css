@@ -50,7 +50,7 @@ textarea {
   margin-top: 40px;
 }
 
-img {
+.icon {
   display: block;
   width: 150px;
   margin-top: 20px;
@@ -105,33 +105,12 @@ img {
   margin-top: 10px;
 }
 
-.monday,
-.tuesday,
-.wednesday,
-.thursday,
-.friday {
-  font-family: Share Tech Mono;
-  font-size: 24px;
-  font-weight: bold;
+.weather-forecast {
+  text-align: center;
 }
 
-.forecastOne,
-.forecastTwo,
-.forecastThree,
-.forecastFour,
-.forecastFive {
-  width: 80px;
-  margin-left: 55px;
-}
-
-.monDegree,
-.tueDegree,
-.wedDegree,
-.thuDegree,
-.friDegree {
-  font-family: Share Tech Mono;
-  font-size: 24px;
-  margin-top: 20px;
+.min {
+  opacity: 0.5;
 }
 
 .githubLink {
