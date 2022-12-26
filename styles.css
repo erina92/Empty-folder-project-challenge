@@ -39,7 +39,7 @@ textarea {
 #current-location {
   border-radius: 15px;
   background-color: rgb(255, 255, 255);
-  color: black;
+  color: blue;
   font-family: Share Tech Mono;
   border: solid black;
 }
@@ -57,47 +57,55 @@ textarea {
   margin-left: 80px;
 }
 
-.description {
-  font-size: 20px;
-}
-
-.description::first-letter {
-  text-transform: capitalize;
-}
-
 .location {
   font-family: Share Tech Mono;
-  margin-top: 25px;
+  margin-top: 50px;
   margin-right: 40px;
-  font-size: 30px;
+  font-size: 20px;
   text-align: justify;
 }
 
 .town {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bolder;
 }
 
 #date-time {
   font-weight: lighter;
+  font-size: 18px;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+.description {
+  margin-top: 10px;
+}
+
+.description::first-letter {
+  text-transform: uppercase;
 }
 
 .temperature {
   font-family: Share Tech Mono;
-  margin-top: 5px;
-  font-size: 150px;
+  margin-top: 28px;
+  font-size: 125px;
 }
 
 .conditions {
   font-family: Share Tech Mono;
-  margin-top: 40px;
+  margin-top: 45px;
   font-size: 24px;
   text-align: justify;
 }
 
+#humidity,
+#wind {
+  font-size: 20px;
+  text-decoration: underline;
+}
 .degrees {
   font-weight: bolder;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .horizontalLine {

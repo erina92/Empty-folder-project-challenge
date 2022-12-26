@@ -40,10 +40,13 @@
             </div>
             <div class="col-3">
               <h3 class="location">
-                <span class="town" id="town-input">Taranto</span> <br />
-                <span id="date-time">18:50 Sun Nov 6</span>
-                <br />
-                <span class="description" id="description-weather"></span>
+                <div class="town" id="town-input">Taranto</div>
+                <div id="date-time">18:50 Sun Nov 6</div>
+                <div
+                  class="description"
+                  id="description-weather"
+                  style="font-size: 24px"
+                ></div>
               </h3>
             </div>
             <div class="col-3">
@@ -73,24 +76,7 @@
             </div>
           </div>
           <hr class="horizontalLine" />
-          <div class="weather-forecast">
-            <div class="row">
-              <div class="col-2">
-                <div class="weather-forecast-day">Mon</div>
-                <img
-                  class="forecast-icon"
-                  id="forecast-icon-1"
-                  src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/mist-day.png"
-                  alt=""
-                  width="80"
-                />
-                <div class="weather-forecast-temperatures">
-                  <span class="max">20°</span>
-                  <span class="min">10°</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="weather-forecast" id="forecast"></div>
         </div>
       </div>
     </div>

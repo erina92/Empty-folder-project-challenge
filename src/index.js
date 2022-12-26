@@ -38,7 +38,40 @@ let months = [
 let yearIndex = currentTime.getFullYear();
 let date = currentTime.getDate();
 
-dateElement.innerHTML = `${hours}:${minutes} ${days[dayIndex]} ${date}`;
+dateElement.innerHTML = `${hours}:${minutes} ${days[dayIndex]} ${date} ${yearIndex}`;
+
+function showForecast(response) {
+  console.log(response.data);
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+
+  forecastHTML = `
+      <div class="col-2">
+        <div class="weather-forecast-day">Mon</div>
+          <img
+            src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/mist-day.png"
+            alt=""
+            width="80"
+          />
+          <div class="weather-forecast-temperatures">
+            <span class="max">20°</span>
+            <span class="min">10°</span>
+          </div>
+        </div>
+      </div>
+  `;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "343bb4d2fc1a4234edcd750t80ofe9d0";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(showForecast);
+}
 
 function showWeather(response) {
   let temperature = Math.round(response.data.temperature.current);
@@ -50,8 +83,8 @@ function showWeather(response) {
   weatherDescription.innerHTML = response.data.condition.description;
   document.querySelector(
     "#humidity"
-  ).innerHTML = `humidity: ${response.data.temperature.humidity}%`;
-  document.querySelector("#wind").innerHTML = `wind: ${Math.round(
+  ).innerHTML = `Humidity: ${response.data.temperature.humidity}%`;
+  document.querySelector("#wind").innerHTML = `Wind: ${Math.round(
     response.data.wind.speed
   )} km/h`;
   let iconElement = document.querySelector("#icon");
@@ -59,6 +92,8 @@ function showWeather(response) {
   weatherDescription.setAttribute("alt", response.data.condition.description);
 
   celsiusTemperature = response.data.temperature.current;
+
+  getForecast(response.data.coordinates);
 }
 
 function changeCity(event) {
