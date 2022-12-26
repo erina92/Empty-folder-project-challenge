@@ -82,7 +82,7 @@ function showLocalWeather() {
     let longitude = geolocation.coords.longitude;
     let apiKey = "343bb4d2fc1a4234edcd750t80ofe9d0";
     let units = "metric";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=343bb4d2fc1a4234edcd750t80ofe9d0&units=metric`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=${units}`;
 
     axios.get(apiUrl).then(showWeather);
   }
