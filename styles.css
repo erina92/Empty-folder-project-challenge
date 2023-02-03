@@ -52,9 +52,9 @@ textarea {
 
 .icon {
   display: block;
-  width: 150px;
-  margin-top: 20px;
-  margin-left: 80px;
+  max-width: 150px;
+  margin: 50px auto;
+  line-height: 0;
 }
 
 .location {
@@ -133,4 +133,24 @@ textarea {
 
 .active:hover {
   text-decoration: none;
+}
+
+@media (max-width: 960px) {
+  .icon {
+    display: block;
+    margin: 0 auto;
+    line-height: 0;
+  }
+
+  .town {
+    font-size: 25px;
+  }
+
+  #date-time {
+    font-size: 15px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
 }
