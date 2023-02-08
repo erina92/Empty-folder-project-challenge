@@ -101,6 +101,7 @@ textarea {
 #wind {
   font-size: 20px;
 }
+
 .degrees {
   font-weight: bolder;
   font-size: 30px;
@@ -136,12 +137,6 @@ textarea {
 }
 
 @media (max-width: 960px) {
-  .icon {
-    display: block;
-    margin: 0 auto;
-    line-height: 0;
-  }
-
   .town {
     font-size: 25px;
   }
@@ -152,5 +147,24 @@ textarea {
 
   .description {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .location {
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+  .icon {
+    display: block;
+  }
+
+  .degrees a {
+    text-decoration: none;
   }
 }
