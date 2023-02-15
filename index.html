@@ -1,100 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="styles.css" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
-    <title>SheCodes Plus - Week 7</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="card">
-        <div class="card-body">
-          <form class="search-form" id="search-form">
-            <input
-              type="text"
-              id="city-input"
-              placeholder="Enter your city..."
-              autocomplete="off"
-            />
-            <input type="submit" id="button" value="Search" />
-            <button id="current-location">📍</button>
-          </form>
-          <div class="row">
-            <div class="col-3 m-0">
-              <img src="#" alt="" class="icon" id="icon" />
-            </div>
-            <div class="col-3 m-0">
-              <h3 class="location">
-                <div class="town" id="town-input">Taranto</div>
-                <div id="date-time">18:50 Sun Nov 6</div>
-                <div
-                  class="description"
-                  id="description-weather"
-                  style="font-size: 24px"
-                ></div>
-              </h3>
-            </div>
-            <div class="col-3">
-              <h3 class="temperature" id="current-temperature">
-                <span id="temperature">16</span>
-              </h3>
-            </div>
-            <div class="col-3">
-              <h4 class="conditions" id="conditions-form">
-                <span class="degrees">
-                  <a href="#" target="_blank" id="celsius-link" class="active"
-                    >°C/</a
-                  >
-                  <a
-                    href="#"
-                    target="_blank"
-                    id="fahrenheit-link"
-                    class="fahrenheit"
-                    >F</a
-                  >
-                </span>
-                <br />
-                <span class="conditions-1" id="humidity">Humidity:79%</span>
-                <br />
-                <span id="wind">Wind: 12mph</span>
-              </h4>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <title>Weather App ☁️</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <form class="search-form" id="search-form">
+          <input type="text" id="city-input" placeholder="Enter your city..." autocomplete="off" />
+          <input type="submit" id="button" value="Search" />
+          <button id="current-location">📍</button>
+        </form>
+        <div class="row">
+          <div class="col-3 m-0">
+            <img src="#" alt="" class="icon" id="icon" />
           </div>
-          <hr class="horizontalLine" />
-          <div class="weather-forecast" id="forecast"></div>
+          <div class="col-3 m-0">
+            <h3 class="location">
+              <div class="town" id="town-input">Taranto</div>
+              <div id="date-time">18:50 Sun Nov 6</div>
+              <div class="description" id="description-weather" style="font-size: 24px"></div>
+            </h3>
+          </div>
+          <div class="col-3">
+            <h3 class="temperature" id="current-temperature">
+              <span id="temperature">16</span>
+            </h3>
+          </div>
+          <div class="col-3">
+            <h4 class="conditions" id="conditions-form">
+              <span class="degrees">
+                <a href="#" target="_blank" id="celsius-link" class="active">°C/</a>
+                <a href="#" target="_blank" id="fahrenheit-link" class="fahrenheit">F</a>
+              </span>
+              <br />
+              <span class="conditions-1" id="humidity">Humidity:79%</span>
+              <br />
+              <span id="wind">Wind: 12mph</span>
+            </h4>
+          </div>
         </div>
+        <hr class="horizontalLine" />
+        <div class="weather-forecast" id="forecast"></div>
       </div>
     </div>
-    <footer>
-      <p class="githubLink">
-        <strong>This code was brought to you by</strong>
-        <a
-          href="https://github.com/erina92/github-hosting-project-challenge"
-          target="_blank"
-          >Erika Miglietta</a
-        >👩‍💻💜
-      </p>
-    </footer>
-    <script src="src/index.js"></script>
-  </body>
+  </div>
+  <footer>
+    <p class="githubLink">
+      <strong>This code was brought to you by</strong>
+      <a href="https://github.com/erina92/github-hosting-project-challenge" target="_blank">Erika Miglietta</a>👩‍💻💜
+    </p>
+  </footer>
+  <script src="src/index.js"></script>
+</body>
+
 </html>

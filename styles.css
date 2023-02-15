@@ -1,6 +1,10 @@
 body {
   background-image: url("src/landscape.jpg");
-  font-family: Share Tech Mono;
+  font-family: 'Pacifico', cursive;
+}
+
+.container {
+  max-width: 45%;
 }
 
 .card {
@@ -8,22 +12,21 @@ body {
   border-radius: 30px;
   background: #000000d0;
   color: white;
-  font-family: Share Tech Mono;
+  font-family: 'Pacifico', cursive;
   display: block;
   max-width: 100%;
 }
 
 .card-body {
   text-align: center;
-  border: solid;
   border-radius: 30px;
-  font-family: Share Tech Mono;
+  font-family: 'Pacifico', cursive;
 }
 
 #city-input {
   border: solid black;
   background-color: white;
-  font-family: Share Tech Mono;
+  font-family: 'Pacifico', cursive;
   width: 30%;
   text-align: center;
   border-radius: 20px;
@@ -32,15 +35,15 @@ body {
 input,
 select,
 textarea {
-  color: black;
+  color: grey;
 }
 
 #button,
 #current-location {
   border-radius: 15px;
   background-color: rgb(255, 255, 255);
-  color: blue;
-  font-family: Share Tech Mono;
+  color: black;
+  font-family: 'Pacifico', cursive;
   border: solid black;
 }
 
@@ -58,7 +61,7 @@ textarea {
 }
 
 .location {
-  font-family: Share Tech Mono;
+  font-family: 'Pacifico', cursive;
   margin-top: 50px;
   margin-right: 40px;
   font-size: 20px;
@@ -85,14 +88,13 @@ textarea {
 }
 
 .temperature {
-  font-family: Share Tech Mono;
-  margin-top: 28px;
-  font-size: 125px;
+  font-family: 'Pacifico', cursive;
+  font-size: 150px;
 }
 
 .conditions {
-  font-family: Share Tech Mono;
-  margin-top: 45px;
+  font-family: 'Pacifico', cursive;
+  margin-top: 50px;
   font-size: 24px;
   text-align: justify;
 }
@@ -122,6 +124,10 @@ textarea {
   opacity: 0.5;
 }
 
+footer p {
+  font-size: 22px;
+}
+
 .githubLink {
   text-align: center;
   margin-top: 10px;
@@ -136,35 +142,259 @@ textarea {
   text-decoration: none;
 }
 
-@media (max-width: 960px) {
-  .town {
-    font-size: 25px;
-  }
+/* styles for small screens */
+@media only screen and (max-width: 480px) {
 
-  #date-time {
-    font-size: 15px;
-  }
-
-  .description {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 1024px) {
   .container {
-    max-width: 720px;
+    max-width: 100%;
   }
 
-  .location {
-    margin: 0 auto;
-    margin-top: 15px;
+  .card {
+    margin-top: 200px;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 1);
+  }
+
+  #city-input {
+    width: 50%;
+    font-size: 12px;
+  }
+
+  #button {
+    font-size: 12px;
+  }
+
+  #current-location {
+    font-size: 12px;
   }
 
   .icon {
-    display: block;
+    max-width: 80px;
+    margin: 50px auto;
+  }
+
+  .location {
+    margin-top: 35px;
+    margin-right: 0;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  #date-time {
+    font-size: 12px;
+  }
+
+  .temperature {
+    font-size: 50px;
+  }
+
+  #town-input {
+    font-size: 16px;
+  }
+
+  .conditions {
+    font-size: 16px;
+    margin-top: 20px;
   }
 
   .degrees a {
-    text-decoration: none;
+    font-size: 20px;
+  }
+
+  #humidity,
+  #wind {
+    font-size: 12px;
+  }
+
+  .horizontalLine {
+    margin-top: 5px;
+  }
+
+  .weather-forecast {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  img {
+    max-width: 35px;
+  }
+
+  footer p {
+    color: black;
+  }
+
+  .githubLink a {
+    color: whitesmoke;
+  }
+}
+
+/* styles for medium screens */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .card {
+    margin-top: 200px;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 1);
+  }
+
+  #city-input {
+    width: 60%;
+  }
+
+  .icon {
+    max-width: 120px;
+  }
+
+  .location {
+    margin: 50px auto;
+  }
+
+  .temperature {
+    font-size: 80px;
+    margin: 50px auto;
+  }
+
+  .conditions {
+    font-size: 20px;
+    margin: 50px auto;
+  }
+
+  #humidity,
+  #wind {
+    font-size: 18px;
+  }
+
+  .horizontalLine {
+    margin-top: 8px;
+  }
+
+  .weather-forecast {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  footer p {
+    color: black;
+    font-size: 20px;
+  }
+
+  .githubLink a {
+    color: whitesmoke;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    max-width: 80%;
+  }
+
+  .card {
+    margin-top: 200px;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 1);
+  }
+
+  #city-input {
+    width: 60%;
+  }
+
+  .icon {
+    max-width: 120px;
+  }
+
+  .location {
+    margin: 50px auto;
+  }
+
+  .temperature {
+    font-size: 80px;
+    margin: 50px auto;
+  }
+
+  .conditions {
+    font-size: 20px;
+    margin: 50px auto;
+  }
+
+  #humidity,
+  #wind {
+    font-size: 18px;
+  }
+
+  .horizontalLine {
+    margin-top: 8px;
+  }
+
+  .weather-forecast {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  footer p {
+    color: black;
+    font-size: 20px;
+  }
+
+  .githubLink a {
+    color: whitesmoke;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .container {
+    max-width: 80%;
+  }
+
+  .card {
+    margin-top: 200px;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 1);
+  }
+
+  #city-input {
+    width: 60%;
+  }
+
+  .icon {
+    max-width: 120px;
+  }
+
+  .location {
+    margin: 50px auto;
+  }
+
+  .temperature {
+    font-size: 80px;
+    margin: 50px auto;
+  }
+
+  .conditions {
+    font-size: 20px;
+    margin: 50px auto;
+  }
+
+  #humidity,
+  #wind {
+    font-size: 18px;
+  }
+
+  .horizontalLine {
+    margin-top: 8px;
+  }
+
+  .weather-forecast {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  footer p {
+    color: black;
+    font-size: 20px;
+  }
+
+  .githubLink a {
+    color: whitesmoke;
   }
 }
