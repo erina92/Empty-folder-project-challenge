@@ -1,6 +1,6 @@
 body {
   background-image: url("src/landscape.jpg");
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
 .container {
@@ -12,7 +12,7 @@ body {
   border-radius: 30px;
   background: #000000d0;
   color: white;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   display: block;
   max-width: 100%;
 }
@@ -20,13 +20,13 @@ body {
 .card-body {
   text-align: center;
   border-radius: 30px;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
 #city-input {
   border: solid black;
   background-color: white;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   width: 30%;
   text-align: center;
   border-radius: 20px;
@@ -43,7 +43,7 @@ textarea {
   border-radius: 15px;
   background-color: rgb(255, 255, 255);
   color: black;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   border: solid black;
 }
 
@@ -61,7 +61,7 @@ textarea {
 }
 
 .location {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   margin-top: 50px;
   margin-right: 40px;
   font-size: 20px;
@@ -88,12 +88,12 @@ textarea {
 }
 
 .temperature {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   font-size: 150px;
 }
 
 .conditions {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   margin-top: 50px;
   font-size: 24px;
   text-align: justify;
@@ -144,7 +144,6 @@ footer p {
 
 /* styles for small screens */
 @media only screen and (max-width: 480px) {
-
   .container {
     max-width: 100%;
   }
